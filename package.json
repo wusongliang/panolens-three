@@ -1,0 +1,23 @@
+{
+  "name": "panolens-three",
+  "version": "1.0.11",
+  "description": "panolens and threejs module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "panolens",
+    "three",
+    "vr"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fengsi-io/panolens-three"
+  },
+  "author": "wu",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.105.2"
+  }
+}
