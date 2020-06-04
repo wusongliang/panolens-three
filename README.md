@@ -3,8 +3,8 @@
 
 <p>Require</p>
 <pre>
-    const PANOLENS = require("panolens-three");
-    const THREE =  PANOLENS.THREE;
+const PANOLENS = require("panolens-three");
+const THREE =  PANOLENS.THREE;
 </pre>
 
 <p>Example</p>
