@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+
+    button {
+      cursor: pointer;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      z-index: 99;
+      padding: 6px 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <button onclick="taggle()">stop or play</button>
+  <script src="../dist/index.js"></script>
+  <script>
+    var panorama, viewer, container, infospot;
+
+    container = document.querySelector( '#container' );
+
+    panorama = new ImagePanorama( 'https://pchen66.github.io/Panolens/examples/asset/textures/equirectangular/tunnel.jpg' );
+
+    infospot = new Infospot( 350, DataImage.Info );
+    infospot.position.set( 0, -2000, -5000 );
+
+    panorama.add( infospot );
+
+    viewer = new Viewer( { container: container, autoRotate: true, autoRotateSpeed: 1, autoRotateActivationDuration: 5000 } );
+    viewer.add( panorama );
+
+    viewer.addUpdateCallback(function(){
+      return false;
+    });
+
+    function taggle() {
+      if (viewer.getControl().autoRotate) {
+        viewer.getControl().autoRotate = false;
+      } else {
+        viewer.getControl().autoRotate = true;
+      }
+    }
+
+
+  </script>
+</body>
+</html>
