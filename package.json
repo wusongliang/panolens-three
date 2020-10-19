@@ -1,6 +1,6 @@
 {
   "name": "panolens-three",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "panolens and threejs module",
   "main": "dist/index.js",
   "files": [
